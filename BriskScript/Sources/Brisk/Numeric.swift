@@ -8,56 +8,56 @@
 
 import Foundation
 
-func +<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: I, rhs: F) -> F {
+public func +<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: I, rhs: F) -> F {
     return F(lhs) + rhs
 }
 
-func +<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: F, rhs: I) -> F {
+public func +<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: F, rhs: I) -> F {
     return lhs + F(rhs)
 }
 
-func -<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: I, rhs: F) -> F {
+public func -<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: I, rhs: F) -> F {
     return F(lhs) - rhs
 }
 
-func -<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: F, rhs: I) -> F {
+public func -<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: F, rhs: I) -> F {
     return lhs - F(rhs)
 }
 
-func *<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: I, rhs: F) -> F {
+public func *<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: I, rhs: F) -> F {
     return F(lhs) * rhs
 }
 
-func *<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: F, rhs: I) -> F {
+public func *<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: F, rhs: I) -> F {
     return lhs * F(rhs)
 }
 
-func /<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: I, rhs: F) -> F {
+public func /<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: I, rhs: F) -> F {
     return F(lhs) / rhs
 }
 
-func /<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: F, rhs: I) -> F {
+public func /<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: F, rhs: I) -> F {
     return lhs / F(rhs)
 }
 
-// ------------------------------------------
+// ----1--------------------------------------
 // How to replicate the ** operator in Swift
 // 
 
 infix operator **
 
-func **<I: BinaryInteger>(lhs: I, rhs: I) -> I {
+public func **<I: BinaryInteger>(lhs: I, rhs: I) -> I {
     return I(pow(Double(lhs), Double(rhs)))
 }
 
-func **<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: I, rhs: F) -> F {
+public func **<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: I, rhs: F) -> F {
     return F(pow(Double(lhs),Double(rhs)))
 }
 
-func **<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: F, rhs: I) -> F {
+public func **<I: BinaryInteger, F: BinaryFloatingPoint>(lhs: F, rhs: I) -> F {
     return F(pow(Double(lhs),Double(rhs)))
 }
 
-func **<F: BinaryFloatingPoint>(lhs: F, rhs: F) -> F {
+public func **<F: BinaryFloatingPoint>(lhs: F, rhs: F) -> F {
     return F(pow(Double(lhs),Double(rhs)))
 }

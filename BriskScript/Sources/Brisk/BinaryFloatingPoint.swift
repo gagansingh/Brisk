@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension BinaryFloatingPoint {
+public extension BinaryFloatingPoint {
     /// e
     static var e: Self { 2.71828182845904523536028747135266250 }
 

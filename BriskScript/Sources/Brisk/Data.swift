@@ -9,7 +9,7 @@
 import Foundation
 import CryptoKit
 
-extension Data {
+public extension Data {
     func md5() -> String {
         let hashed = Insecure.MD5.hash(data: self)
         return hashed.compactMap { String(format: "%02x", $0) }.joined()

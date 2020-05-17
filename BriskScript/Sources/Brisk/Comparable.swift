@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Comparable {
+public extension Comparable {
     func clamp(low: Self, high: Self) -> Self {
         if self > high {
             return high

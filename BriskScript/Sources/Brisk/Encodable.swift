@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Encodable {
+public extension Encodable {
     func jsonData(keys: JSONEncoder.KeyEncodingStrategy = .useDefaultKeys, dates: JSONEncoder.DateEncodingStrategy = .deferredToDate) -> Data {
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = keys

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Sequence where Element: Hashable {
+public extension Sequence where Element: Hashable {
     func unique() -> [Element] {
         var checked = Set<Element>()
         var result = [Element]()
@@ -24,7 +24,7 @@ extension Sequence where Element: Hashable {
     }
 }
 
-extension Sequence where Element: Equatable {
+public extension Sequence where Element: Equatable {
     func indexes(of searchItem: Element) -> [Int] {
         var returnValue = [Int]()
 
@@ -38,7 +38,7 @@ extension Sequence where Element: Equatable {
     }
 }
 
-extension Sequence {
+public extension Sequence {
     func any(match predicate: (Element) throws -> Bool) rethrows -> Bool {
         try contains(where: predicate)
     }

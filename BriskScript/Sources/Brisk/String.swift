@@ -9,7 +9,7 @@
 import Foundation
 import CryptoKit
 
-extension String {
+public extension String {
     var lines: [String] {
         components(separatedBy: .newlines)
     }

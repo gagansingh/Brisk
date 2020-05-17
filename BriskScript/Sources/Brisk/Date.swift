@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     static func unixTime() -> Int {
         Int(Date().timeIntervalSince1970)
     }

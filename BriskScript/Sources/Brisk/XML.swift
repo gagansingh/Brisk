@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum XML {
+public enum XML {
     class XMLNode {
         let tag: String
         var data: String

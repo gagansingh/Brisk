@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension URL {
+public extension URL {
     /**
      Create new URLs by appending strings
      - Parameter lhs: The base URL to use
