@@ -1,3 +1,18 @@
+## **FORK DETAILS**
+
+This fork was created to allow linking to BriskScripts codebase as a library in `Swift Package Manager`
+
+add
+```swift
+.package(name: "Brisk", url: "https://github.com/gagansingh/Brisk", .branch("swift-package"))
+```
+to your package's dependencies to allow use of Brisk's collection of convenience functions.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <p align="center">
     <img src="https://www.hackingwithswift.com/img/brisk/logo.png" alt="Brisk logo" width="413" maxHeight="83" />
 </p>
