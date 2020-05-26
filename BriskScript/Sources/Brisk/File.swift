@@ -91,6 +91,10 @@ public func tempFile() -> String {
     NSTemporaryDirectory() + UUID().uuidString
 }
 
+public func tempFile(named name: String) -> String {
+    NSTemporaryDirectory() + name 
+}
+
 public func basename(of file: String) -> String {
     URL(fileURLWithPath: file).lastPathComponent
 }
